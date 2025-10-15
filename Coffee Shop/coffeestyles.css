@@ -69,8 +69,6 @@ h1, h2 {
   width: 25%;
 }
 
-/* FOOTER */
-
 footer {
   font-size: 14px;
 }
@@ -97,4 +95,67 @@ a:hover {
 
 a:active {
   color: brown;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+#searchBar {
+  padding: 5px 10px;
+  font-size: 14px;
+  width: 60%;
+  border: 1px solid brown;
+  border-radius: 8px;
+}
+
+#themeToggle {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#order-summary {
+  background-color: #f7e1b5;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#order-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+#order-summary li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#clearOrder {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #3b2f2f;
+  color: #f5deb3;
+}
+
+.dark-mode .menu {
+  background-color: #4b3832;
+}
+
+.dark-mode #order-summary {
+  background-color: #5b4239;
 }
