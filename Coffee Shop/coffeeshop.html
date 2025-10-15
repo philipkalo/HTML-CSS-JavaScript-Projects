@@ -8,46 +8,62 @@
   </head>
   <body>
     <div class="menu">
-      <main>
+      <header>
         <h1>CAMPER CAFE</h1>
         <p class="established">Est. 2020</p>
+        <div class="controls">
+          <input type="text" id="searchBar" placeholder="Search menu..." />
+          <button id="themeToggle">🌙 Dark Mode</button>
+        </div>
+      </header>
+
+      <main>
         <hr>
-        <section>
+        <section class="menu-section" id="coffee-section">
           <h2>Coffee</h2>
           <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
-          <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          <article class="item" data-name="French Vanilla" data-price="3.00">
+            <p class="flavor">French Vanilla</p><p class="price">$3.00</p>
           </article>
-          <article class="item">
-            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          <article class="item" data-name="Caramel Macchiato" data-price="3.75">
+            <p class="flavor">Caramel Macchiato</p><p class="price">$3.75</p>
           </article>
-          <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          <article class="item" data-name="Pumpkin Spice" data-price="3.50">
+            <p class="flavor">Pumpkin Spice</p><p class="price">$3.50</p>
           </article>
-          <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          <article class="item" data-name="Hazelnut" data-price="4.00">
+            <p class="flavor">Hazelnut</p><p class="price">$4.00</p>
           </article>
-          <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          <article class="item" data-name="Mocha" data-price="4.50">
+            <p class="flavor">Mocha</p><p class="price">$4.50</p>
           </article>
         </section>
-        <section>
+
+        <section class="menu-section" id="desserts-section">
           <h2>Desserts</h2>
           <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
-          <article class="item">
-            <p class="dessert">Donut</p><p class="price">1.50</p>
+          <article class="item" data-name="Donut" data-price="1.50">
+            <p class="dessert">Donut</p><p class="price">$1.50</p>
           </article>
-          <article class="item">
-            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          <article class="item" data-name="Cherry Pie" data-price="2.75">
+            <p class="dessert">Cherry Pie</p><p class="price">$2.75</p>
           </article>
-          <article class="item">
-            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          <article class="item" data-name="Cheesecake" data-price="3.00">
+            <p class="dessert">Cheesecake</p><p class="price">$3.00</p>
           </article>
-          <article class="item">
-            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          <article class="item" data-name="Cinnamon Roll" data-price="2.50">
+            <p class="dessert">Cinnamon Roll</p><p class="price">$2.50</p>
           </article>
         </section>
       </main>
+
+      <div id="order-summary">
+        <h3>Your Order</h3>
+        <ul id="orderList"></ul>
+        <p id="total">Total: $0.00</p>
+        <button id="clearOrder">Clear Order</button>
+      </div>
+
       <hr class="bottom-line">
       <footer>
         <address>
@@ -58,5 +74,7 @@
         </address>
       </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
