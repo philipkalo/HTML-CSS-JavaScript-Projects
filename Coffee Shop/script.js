@@ -10,7 +10,7 @@ searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
   document.querySelectorAll('.item').forEach((item) => {
     const name = item.dataset.name.toLowerCase();
-    item.style.display = name.includes(term) ? 'flex' : 'none';
+    item.style.display = name.includes(term) ? '' : 'none';
   });
 });
 
@@ -26,10 +26,17 @@ items.forEach((item) => {
     const name = item.dataset.name;
     const price = parseFloat(item.dataset.price);
     total += price;
+    
     const li = document.createElement('li');
     li.textContent = `${name} - $${price.toFixed(2)}`;
     orderList.appendChild(li);
     totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    
+    // Visual feedback: brief highlight animation
+    item.style.backgroundColor = 'rgba(0, 128, 0, 0.2)';
+    setTimeout(() => {
+      item.style.backgroundColor = '';
+    }, 200);
   });
 });
 
